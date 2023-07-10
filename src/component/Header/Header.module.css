@@ -1,0 +1,83 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    height: 67px;
+    align-items: center;
+}
+.navBox{
+    display: flex;
+}
+.logo{
+    width: 91px;
+    height: 27px;
+    margin: 6px 0 0 0;
+}
+
+.locationBox{
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    margin: 0px 0px 0px 20px;
+}
+.pointBox{
+    display: flex;
+}
+.point{
+    width: 13px;
+    height: 18px;
+    margin: 2px 9px 0 0px;
+}
+.city{
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400px;
+}
+.street{
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    color: #364844;
+    margin: 0 0 0 22px;
+}
+
+.contactBox{
+    display: flex;
+}
+.numBox{
+    display: flex;
+    margin: 9px 0 0 0;
+}
+.watsap{
+    width: 25px;
+    height: 25px;
+}
+.tel{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    margin: 0 0 0 10px;
+}
+.record{
+    margin: 0 0 0 40px;
+}
+
+.recordButton{
+    letter-spacing: 0.5px;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    width: 196px;
+    height: 43px;
+    border: none;
+    border-radius: 50px;
+    background-color: #0DBC91;
+    color: #fff;
+    cursor: pointer;
+}
+.recordButton:hover{
+    background-color: #00D29F;
+    transition: all 0.5s;
+}
+.recordButton:active{
+    background-color: #00D29F;   
+}

@@ -1,0 +1,54 @@
+.footer{
+    width: 100%;
+    height: 144px;
+    background-color: #08664F;
+}
+.footerBox{
+    max-width:1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 144px;
+}
+.navigate{
+    width: 515px;
+    height:43px ;
+    background-color: #08664F;
+}
+.navigateBox{
+    max-width:1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+    height: 43px;
+    display: flex;
+    align-items: center;
+}
+.nav_point{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.nav_point{
+    margin:0 30px 0 0;
+}
+.nav_point:hover{
+    border-bottom: 1px solid #fff;
+    transition: all 0.5s;
+}
+.logo{
+    width: 91px;
+    height: 27px;
+}
+.social{
+    width: 35px;
+    height: 35px;
+    margin-left: 15px;
+}
+
