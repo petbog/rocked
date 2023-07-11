@@ -20,7 +20,7 @@ const Footer = () => {
                         <Link className={s.nav_point} to='*'>Контакты</Link>
                     </div>
                 </div>
-                <div className="">
+                <div className={s.socialBox}>
                     <img className={s.social} src={instagram} alt="instagram" />
                     <img className={s.social} src={watsap} alt="watsap" />
                     <img className={s.social} src={telefram} alt="telefram" />

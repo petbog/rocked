@@ -17,4 +17,31 @@
     color: #fff;
     border-radius: 50px;
     margin: 0 0 0 215px;
+    cursor: pointer;
+    transition: all ease 0.5s;
+}
+.button:hover{
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+@media (max-width:706px){
+    .title {
+        font-size: 33px;
+    }
+    .button {
+        font-size: 11px;
+        padding: 9px 27px;
+        margin: 0 0 0 96px;
+    }
+}
+@media (max-width:338px){
+    .title {
+        font-size: 25px;
+    }
+    .button {
+        font-size: 11px;
+        padding: 9px 27px;
+        margin: 0 0 0 55px;
+    }
 }

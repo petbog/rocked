@@ -27,3 +27,8 @@
     border-bottom: 1px solid #fff;
     transition: all 0.5s;
 }
+@media(max-width:759px){
+    .navigate{
+        display: none;
+    }
+}
