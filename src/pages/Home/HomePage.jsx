@@ -14,13 +14,13 @@ const HomePage = () => {
                 <Header />
             </div>
 
-            <Navigate />
-            <MainTop />
-            
+            {/* <Navigate /> */}
+            {/* <MainTop /> */}
+{/*             
             <div className={s.container}>
                 <MainBottom />
-            </div>
-            <Footer/>
+            </div> */}
+            {/* <Footer/> */}
         </div>
 
     )

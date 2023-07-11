@@ -1,38 +1,44 @@
-.header{
+.header {
     display: flex;
     justify-content: space-between;
     height: 67px;
     align-items: center;
 }
-.navBox{
+
+.navBox {
     display: flex;
 }
-.logo{
+
+.logo {
     width: 91px;
     height: 27px;
     margin: 6px 0 0 0;
 }
 
-.locationBox{
+.locationBox {
     display: flex;
     flex-direction: column;
     min-width: 200px;
     margin: 0px 0px 0px 20px;
 }
-.pointBox{
+
+.pointBox {
     display: flex;
 }
-.point{
+
+.point {
     width: 13px;
     height: 18px;
     margin: 2px 9px 0 0px;
 }
-.city{
+
+.city {
     font-size: 14px;
     line-height: 21px;
     font-weight: 400px;
 }
-.street{
+
+.street {
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
@@ -40,28 +46,32 @@
     margin: 0 0 0 22px;
 }
 
-.contactBox{
+.contactBox {
     display: flex;
 }
-.numBox{
+
+.numBox {
     display: flex;
     margin: 9px 0 0 0;
 }
-.watsap{
+
+.watsap {
     width: 25px;
     height: 25px;
 }
-.tel{
+
+.tel {
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
     margin: 0 0 0 10px;
 }
-.record{
+
+.record {
     margin: 0 0 0 40px;
 }
 
-.recordButton{
+.recordButton {
     letter-spacing: 0.5px;
     font-size: 14px;
     line-height: 21px;
@@ -74,10 +84,169 @@
     color: #fff;
     cursor: pointer;
 }
-.recordButton:hover{
+
+.recordButton:hover {
     background-color: #00D29F;
     transition: all 0.5s;
 }
-.recordButton:active{
-    background-color: #00D29F;   
+
+.recordButton:active {
+    background-color: #00D29F;
+}
+
+.burger {
+    display: none;
+    position: relative;
+    z-index: 50;
+    align-items: center;
+    width: 30px;
+    height: 18px;
+}
+
+.burger span {
+    height: 2px;
+    width: 25px;
+    transform: scale(1);
+    background-color: #1FA181;
+}
+
+.burger::before,
+.burger::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 25px;
+    background-color: #1FA181;
+    transition: all 0.3s ease 0s;
+}
+
+.burger::before {
+    top: 0;
+}
+
+.burger::after {
+    bottom: 0;
+}
+
+.burger.active span {
+    transform: scale(0);
+}
+
+.burger.active::before {
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
+}
+
+.burger.active::after {
+    top: 50%;
+    transform: rotate(45deg) translate(0, -50%);
+}
+
+@keyframes burgerAnimation{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+.adaptiv {
+    display: none;
+}
+
+.navigate {
+    display: none;
+}
+
+.navigateBox{
+    opacity: 0.8;
+}
+.nav_point {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 8px 0 0px -26px
+}
+.nav_point:nth-child(1){
+    margin-top: -25px;
+}
+
+
+.nav_point:hover {
+    border-bottom: 1px solid #fff;
+    transition: all 0.5s ease;
+}
+
+.adaptivbutton{
+    letter-spacing: 0.5px;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    width: 196px;
+    height: 43px;
+    border: none;
+    border-radius: 50px;
+    background-color: #fff;
+    color: #0DBC91;
+    cursor: pointer;
+    margin: 52px 0px 0 -26px;
+}
+.list {
+    display: flex;
+}
+@media(max-width:758px) {
+
+    .navigateBox {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 64px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 50;
+        overflow-y: auto;
+        padding: 50px 40px;
+        background-color: #45927FE5;
+        animation: burgerAnimation 0.4s;
+    }
+    
+    .locationBox {
+        display: none;
+    }
+
+    .numBox {
+        display: none;
+    }
+
+    .record {
+        display: none;
+    }
+
+    .adaptiv {
+        display: flex;
+        flex-direction: column;
+        align-items: self-end;
+    }
+
+    .tel {
+        font-weight: 700;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .logo {
+        margin-top: 1px;
+
+    }
+
+}
+
+@media(max-width:400px) {
+    .logo {
+        width: 65px;
+        height: 18px;
+    }
 }
