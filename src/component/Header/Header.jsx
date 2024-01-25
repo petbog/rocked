@@ -4,10 +4,21 @@ import point from '../../img/Vector.png'
 import watsap from '../../img/whatsapp 1.png'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import Poppup from '../Poppup/Poppup'
 
 const Header = () => {
     const [activ, setActive] = useState(false)
+    const [PoppupWindow, setPoppupWindow] = useState(false)
 
+
+    const handleActiv = () => {
+        setActive(!activ)
+    }
+
+    const handlePoppup = () => {
+        setPoppupWindow(prev => !prev)
+        document.body.style.overflow = 'hidden'
+    }
 
     return (
         <div className={s.header}>
@@ -32,7 +43,7 @@ const Header = () => {
                 </div>
                 <div className="">
                     <div className={s.record}>
-                        <button className={s.recordButton} >Записаться на прием</button>
+                        <button onClick={handlePoppup} className={s.recordButton} >Записаться на прием</button>
                     </div>
                 </div>
                 <div className={s.adaptiv}>
@@ -40,7 +51,7 @@ const Header = () => {
                     <div className={s.city}>Ростов-на-Дону</div>
                 </div>
                 <div
-                    onClick={() => setActive(!activ)}
+                    onClick={handleActiv}
                     className={activ === true ? `${s.navigate} + ${s.list}` : s.navigate}
 
                 >
@@ -51,12 +62,15 @@ const Header = () => {
                         <Link className={s.nav_point} to='*'>Цены</Link>
                         <Link className={s.nav_point} to='*'>Контакты</Link>
                         <div className={s.button}>
-                            <button className={s.adaptivbutton} >Записаться на прием</button>
+                            <button onClick={handlePoppup} className={s.adaptivbutton}>Записаться на прием</button>
                         </div>
                     </div>
 
                 </div>
             </div>
+            {
+                PoppupWindow ? <Poppup isActiv={PoppupWindow} /> : ''
+            }
         </div>
     )
 }

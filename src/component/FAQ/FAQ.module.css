@@ -1,0 +1,40 @@
+.FAQ {
+    margin: 52px auto 35px auto;
+    max-width: 1140px;
+    min-height: 108px;
+    background: #F8FBFA;
+
+}
+
+.FAQ_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 28px;
+    margin: 34px 0 0 34px;
+}
+
+.button {
+    margin: 32px 42px 0 0;
+    cursor: pointer;
+    padding: 5px;
+}
+.text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 25px 0 0 40px;
+    max-width: 943px;
+}
+.subText{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 15px 0 0 0;
+    max-width: 943px;
+}

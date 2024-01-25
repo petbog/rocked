@@ -3,6 +3,7 @@ import Header from "../../component/Header/Header"
 import MainBottom from "../../component/MainBottom/MainBottom"
 import MainTop from "../../component/MainTop/MainTop"
 import Navigate from "../../component/Navigate/Navigate"
+import WindowQuestion from "../../component/WindowQuestion/WindowQuestion"
 import s from './HomePage.module.css'
 
 
@@ -16,11 +17,11 @@ const HomePage = () => {
 
             <Navigate />
             <MainTop />
-            
+            <WindowQuestion/>
             <div className={s.container}>
                 <MainBottom />
             </div>
-            <Footer/>
+            <Footer />
         </div>
 
     )
