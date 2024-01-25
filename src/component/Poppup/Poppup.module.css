@@ -14,13 +14,14 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    min-width: 1140px;
+    width: 1140px;
     height: 350px;
     background-color: #F8FBFA;
     border-radius: 5px;
 }
 
 .poppup_box {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -49,7 +50,8 @@
     flex-direction: column;
     margin: 60px 98px 0 0;
 }
-.input_name{
+
+.input_name {
     min-width: 366px;
     height: 42px;
     padding: 0 73px 0 21px;
@@ -58,9 +60,11 @@
     border: 1px solid #E1E1E1;
     border-radius: 5px;
     margin: 0 0 17px 0;
-    outline:none
+    outline: none;
+    position: relative;
 }
-.input_tel{
+
+.input_tel {
     min-width: 366px;
     height: 42px;
     padding: 0 73px 0 21px;
@@ -69,9 +73,10 @@
     border: 1px solid #E1E1E1;
     border-radius: 5px;
     margin: 0 0 17px 0;
-    outline:none
+    outline: none
 }
-.input_email{
+
+.input_email {
     min-width: 366px;
     height: 42px;
     padding: 0 73px 0 21px;
@@ -80,9 +85,10 @@
     border: 1px solid #E1E1E1;
     border-radius: 5px;
     margin: 0 0 17px 0;
-    outline:none
+    outline: none
 }
-.input_button{
+
+.input_button {
     color: #fff;
     font-size: 14px;
     line-height: 21px;
@@ -94,11 +100,59 @@
     background-color: #0DBC91;
     border-radius: 50px;
     cursor: pointer;
+    transition: all ease 0.3s;
 
 }
-.closePoppup{
+
+.input_button:hover {
+    background-color: #00D29F;
+}
+
+.closePoppup {
     position: absolute;
     right: 0;
     top: -52px;
     cursor: pointer;
+    opacity: 0.5;
+    transition: all ease 0.3s;
+}
+
+.closePoppup:hover {
+    opacity: 1;
+}
+
+.clear_name {
+    position: absolute;
+    top: 72px;
+    right: 110px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: all ease 0.3s;
+}
+
+.clear_name:hover {
+    opacity: 1;
+}
+
+.clear_phone {
+    position: absolute;
+    top: 131px;
+    right: 110px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: all ease 0.3s;
+}
+.clear_phone:hover{
+    opacity: 1;
+}
+.clear_email {
+    position: absolute;
+    top: 193px;
+    right: 110px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: all ease 0.3s;
+}
+.clear_email:hover{
+    opacity: 1;
 }

@@ -3,7 +3,7 @@ import doc from '../../img/Group 43.png'
 import arroyPrev from '../../img/left-arrow 6.png'
 import arroyNext from '../../img/left-arrow 5.png'
 
-const MainBottom = () => {
+const MainBottom = ({advantages1,advantages2,advantages3,advantages4,prevSum,nextSum,imges}) => {
     return (
         <div className={s.itemBox}>
             <div className={s.MainBottom}>
@@ -13,15 +13,15 @@ const MainBottom = () => {
                         <p className={s.text}>для мужчин</p>
                         <div className={s.advantages}>
                             <ul className={s.advantagesItem} >
-                                <li className={s.advantagesList}>Гормональный скрининг</li>
-                                <li className={s.advantagesList}>Тестостерон</li>
-                                <li className={s.advantagesList}>Свободный тестостерон</li>
-                                <li className={s.advantagesList}>Глобулин, связывающий половые гормоны</li>
+                                <li className={s.advantagesList}>{advantages1}</li>
+                                <li className={s.advantagesList}>{advantages2}</li>
+                                <li className={s.advantagesList}>{advantages3}</li>
+                                <li className={s.advantagesList}>{advantages4}</li>
                             </ul>
                         </div>
                         <div className={s.priceBox}>
-                            <div className={s.pricePrev}>Всего 2800₽</div>
-                            <div className={s.preceNext}>3500₽</div>
+                            <div className={s.pricePrev}>Всего {prevSum}₽</div>
+                            <div className={s.preceNext}>{nextSum}₽</div>
                         </div>
                         <div className={s.button}>
                             <button className={s.buttonDetails}>Записаться</button>
@@ -30,11 +30,11 @@ const MainBottom = () => {
                     </div>
                     <div className={s.boxImg}>
                         <div className={s.bacground}></div>
-                        <img className={s.doc} src={doc} alt="doc" />
+                        <img className={s.doc} src={imges} alt="doc" />
                     </div>
                 </div>
             </div>
-            <div className={s.boxArroy}>
+            {/* <div className={s.boxArroy}>
                 <div className={s.arroyItem}>
                     <img className={s.arroyPrev} src={arroyPrev} alt="arroyPrev" />
                     <div className={s.page}>
@@ -43,9 +43,8 @@ const MainBottom = () => {
                         <span className={s.nextPage}>4</span>
                     </div>
                     <img className={s.arroyNext} src={arroyNext} alt="arroyNext" />
-
                 </div>
-            </div>
+            </div> */}
         </div>
 
     )

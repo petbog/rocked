@@ -7,7 +7,7 @@
 .box {
     width: 1140px;
     height: 440px;
-    background-color: #E2F0EF;
+    /* background-color: #E2F0EF; */
     margin: 100px 0 0 0;
     display: flex;
 }
