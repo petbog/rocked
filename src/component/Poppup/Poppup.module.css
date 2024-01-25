@@ -1,4 +1,4 @@
-.background{
+.background {
     z-index: 10;
     position: absolute;
     top: 0;
@@ -8,12 +8,97 @@
     background-color: #45927F;
     overflow: hidden
 }
-.poppup{
+
+.poppup {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
+    min-width: 1140px;
+    height: 350px;
+    background-color: #F8FBFA;
+    border-radius: 5px;
 }
-.scrollOff{
+
+.poppup_box {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.scrollOff {
     overflow: hidden
+}
+
+.info_title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 46px;
+    margin: 107px 0 0 97px;
+}
+
+.info_text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 20px 0 0 97px;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    margin: 60px 98px 0 0;
+}
+.input_name{
+    min-width: 366px;
+    height: 42px;
+    padding: 0 73px 0 21px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border: 1px solid #E1E1E1;
+    border-radius: 5px;
+    margin: 0 0 17px 0;
+    outline:none
+}
+.input_tel{
+    min-width: 366px;
+    height: 42px;
+    padding: 0 73px 0 21px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border: 1px solid #E1E1E1;
+    border-radius: 5px;
+    margin: 0 0 17px 0;
+    outline:none
+}
+.input_email{
+    min-width: 366px;
+    height: 42px;
+    padding: 0 73px 0 21px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border: 1px solid #E1E1E1;
+    border-radius: 5px;
+    margin: 0 0 17px 0;
+    outline:none
+}
+.input_button{
+    color: #fff;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    padding: 16px 0;
+    width: 196px;
+    margin: 16px auto 0 auto;
+    border: none;
+    background-color: #0DBC91;
+    border-radius: 50px;
+    cursor: pointer;
+
+}
+.closePoppup{
+    position: absolute;
+    right: 0;
+    top: -52px;
+    cursor: pointer;
 }
