@@ -1,9 +1,14 @@
 import s from './MainBottom.module.css'
-import doc from '../../img/Group 43.png'
+import doc from '../../img/Group43.png'
 import arroyPrev from '../../img/left-arrow 6.png'
 import arroyNext from '../../img/left-arrow 5.png'
 
+
+
+
+
 const MainBottom = ({advantages1,advantages2,advantages3,advantages4,prevSum,nextSum,imges}) => {
+    
     return (
         <div className={s.itemBox}>
             <div className={s.MainBottom}>

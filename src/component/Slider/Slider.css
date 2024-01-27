@@ -1,0 +1,22 @@
+.slider{
+    height: 900px;
+    padding-bottom: 50px;
+    position: relative;
+}
+.swiper-button-next {
+    background-image: url("../../img/Vector\ \(2\).svg")  !important;
+    background-repeat: no-repeat;
+  transform: translate(-485px, 290px);
+    padding: 5px;
+  }
+  .swiper-button-prev {
+    background-image: url("../../img//Vector\ \(1\).svg") !important;
+    background-repeat: no-repeat;
+    transform: translate(488px, 290px);
+    padding: 5px;
+  
+  }
+  .swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 0 !important;
+  }

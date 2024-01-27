@@ -2,6 +2,7 @@ import { useState } from 'react'
 import s from './FAQ.module.css'
 import plus from '../../img/Кнопка _Развернуть_.svg'
 import minus from '../../img/Vector.svg'
+import { CSSTransition, TransitionGroup } from 'react-transition-group'
 
 
 const FAQ = ({ title, text, subText }) => {
@@ -24,16 +25,22 @@ const FAQ = ({ title, text, subText }) => {
                 }
 
             </div>
+            <TransitionGroup className="todo-list">
 
-            {hidden ? <div className={s.text}>
-                {text}
-                <br />
-                <div className={s.subText}>
-                {subText}
-                </div>
+                {hidden ? <CSSTransition
+                    timeout={500}
+                    classNames="item"
+                >
+                    <div className={s.text}>
+                        {text}
+                        <br />
+                        <div className={s.subText}>
+                            {subText}
+                        </div> </div>
+                </CSSTransition>
 
-            </div> : ''}
-
+                    : ''}
+            </TransitionGroup>
         </div>
     )
 }

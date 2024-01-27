@@ -3,6 +3,8 @@ import s from './WindowQuestion.module.css'
 import item from '../../info.json'
 
 const WindowQuestion = () => {
+
+
     return (
         <div className={s.WindowQuestion}>
             <div className={s.title_box}>
@@ -10,12 +12,12 @@ const WindowQuestion = () => {
                     Часто задаваемые вопросы
                 </div>
             </div>
-
             {
-                item.map((item,i) => (
-                    <FAQ key={i} {...item} />
+                item.map((item, i) => (
+                    <FAQ {...item} key={i} />
                 ))
             }
+
         </div>
     )
 }

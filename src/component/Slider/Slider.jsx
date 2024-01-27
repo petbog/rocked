@@ -1,13 +1,16 @@
-import s from './Slider.module.css'
-import item from '../../slider.json'
+import './Slider.css'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import { Pagination, Navigation } from 'swiper/modules';
 import MainBottom from './../MainBottom/MainBottom';
+import {SliderComponent} from '../SliderComponent/SliderComponent'
 
 const Slider = () => {
+
+
+
     return (
-        <div className={s.slider}>
+        <div className='slider'>
             <Swiper
                 pagination={{
                     type: 'fraction',
@@ -18,7 +21,7 @@ const Slider = () => {
             >
 
                 {
-                    item.map((slide,i) => (
+                    SliderComponent.map((slide,i) => (
                         <SwiperSlide key={i}>
                             <MainBottom {...slide} />
                         </SwiperSlide>
