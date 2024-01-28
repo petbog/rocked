@@ -1,9 +1,9 @@
 import './Slider.css'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
-import { Pagination, Navigation } from 'swiper/modules';
+import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 import MainBottom from './../MainBottom/MainBottom';
-import {SliderComponent} from '../SliderComponent/SliderComponent'
+import { SliderComponent } from '../SliderComponent/SliderComponent'
 
 const Slider = () => {
 
@@ -12,16 +12,20 @@ const Slider = () => {
     return (
         <div className='slider'>
             <Swiper
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                }}
                 pagination={{
                     type: 'fraction',
                 }}
                 navigation={true}
-                modules={[Pagination, Navigation]}
+                modules={[Pagination, Navigation,Autoplay]}
                 className="mySwiper"
             >
 
                 {
-                    SliderComponent.map((slide,i) => (
+                    SliderComponent.map((slide, i) => (
                         <SwiperSlide key={i}>
                             <MainBottom {...slide} />
                         </SwiperSlide>

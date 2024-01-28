@@ -3,9 +3,10 @@
     max-width: 1140px;
     min-height: 108px;
     background: #F8FBFA;
-
 }
-
+.BOX{
+    margin: 0 15px;
+}
 .FAQ_box {
     display: flex;
     justify-content: space-between;
@@ -28,9 +29,9 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
-    margin: 25px 0 0 40px;
+    margin: 25px 0 0 34px;
     max-width: 943px;
-    padding-bottom: 38px;
+    padding: 0 10px 38px 0;
 }
 .subText{
     font-size: 16px;
@@ -38,4 +39,17 @@
     line-height: 20px;
     margin: 15px 0 0 0;
     max-width: 943px;
+}
+
+@media(max-width:780px){
+    .title {
+        font-size: 18px;
+    }
+    .text {
+        font-size: 14px;
+    }
+    .subText{
+        font-size: 14px;
+    }
+    
 }
