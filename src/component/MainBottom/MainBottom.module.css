@@ -44,6 +44,7 @@
     font-size: 16px;
     line-height: 20px;
     color: #364844;
+    padding:  0 23px 0 0 ;
 }
 
 .priceBox {
@@ -180,9 +181,29 @@
         padding-bottom: 55px;
     }
 }
+@media(max-width:676px){
+    .box {
+        margin-top: 326px;
+    }
+}
+@media(max-width:538px){
+    .box {
+        margin-top: 224px;
+    }
+}
 @media(max-width:490px){
     .box {
         margin-top: 229px;
+    }
+}
+@media(max-width:410px){
+    .box {
+        margin-top: 149px;
+    }
+}
+@media(max-width:358px){
+    .box {
+        margin-top: 108px;
     }
 }
 @media(max-width:710px) {
@@ -222,6 +243,12 @@
         width: 117px;
         height: 36px;
     }
+}
+@media(max-width:378px) {
+    .doc {
+        height: 223px;
+    }
+
 }
 @media(max-width:366px) {
 

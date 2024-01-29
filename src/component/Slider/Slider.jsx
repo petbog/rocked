@@ -12,10 +12,6 @@ const Slider = () => {
     return (
         <div className='slider'>
             <Swiper
-                autoplay={{
-                    delay: 2500,
-                    disableOnInteraction: false,
-                }}
                 pagination={{
                     type: 'fraction',
                 }}

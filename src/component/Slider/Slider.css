@@ -9,10 +9,6 @@
   padding: 5px;
   background-position-y: 9px;
 }
-/* .swiper-button-prev:hover {
-  background-image: url("../../img/green\ vector.png") !important;
-
-} */
 
 .swiper-button-next {
   background-image: url("../../img/Vector\ \(2\).svg") !important;
@@ -29,4 +25,41 @@
 .swiper-button-prev::after,
 .swiper-button-next::after {
   font-size: 0 !important;
+}
+@media(max-width:1217px){
+  .swiper-button-prev {
+    transform: translate(488px, 466px);
+  }
+  
+  .swiper-button-next {
+    transform: translate(-485px, 474px);
+  }
+}
+@media(max-width:1132px){
+  .swiper-button-prev {
+    transform: translate(566px, 466px);
+  }
+  
+  .swiper-button-next {
+    transform: translate(-460px, 474px);
+  }
+}
+@media(max-width:900px){
+  .swiper-button-prev {
+    transform: translate(310px, 466px);
+  }
+  
+  .swiper-button-next {
+    transform: translate(-314px, 474px);
+  }
+}
+@media(max-width:900px){
+  .swiper-button-prev {
+    transform: translate(87px, 321px);;
+  }
+  
+  .swiper-button-next {
+    transform: translate(-88px, 330px);
+  }
+  
 }

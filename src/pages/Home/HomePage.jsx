@@ -1,3 +1,4 @@
+import { useState } from "react"
 import Footer from "../../component/Footer/Footer"
 import Header from "../../component/Header/Header"
 import MainBottom from "../../component/MainBottom/MainBottom"
@@ -6,10 +7,12 @@ import Navigate from "../../component/Navigate/Navigate"
 import Slider from "../../component/Slider/Slider"
 import WindowQuestion from "../../component/WindowQuestion/WindowQuestion"
 import s from './HomePage.module.css'
+import Poppup from "../../component/Poppup/Poppup"
 
 
 
 const HomePage = () => {
+
     return (
         <div className="">
             <div className={s.container}>
@@ -18,10 +21,9 @@ const HomePage = () => {
 
             <Navigate />
             <MainTop />
-            <WindowQuestion/>
+            <WindowQuestion />
             <div className={s.container}>
-                {/* <MainBottom /> */}
-                <Slider/>
+                <Slider  />
             </div>
             <Footer />
         </div>

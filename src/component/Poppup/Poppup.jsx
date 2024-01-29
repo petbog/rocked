@@ -20,6 +20,7 @@ const Poppup = ({ isActiv, setPoppupWindow }) => {
     const closePoppup = () => {
         setPoppupWindow(!isActiv)
         document.body.style.overflow = 'auto'
+        window.scrollTo(0, 0)
     }
     return (
         <div div className={isActiv ? `${s.background} + ${s.scrollOff}` : s.background} >
@@ -57,7 +58,12 @@ const Poppup = ({ isActiv, setPoppupWindow }) => {
                         <button className={s.input_button}>Записаться</button>
                     </div>
                 </div>
-                <img onClick={closePoppup} className={s.closePoppup} src={close} alt="close" />
+                <svg onClick={closePoppup} className={s.closePoppup} width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L21.0001 21.0001" stroke="#F8FBFA" stroke-width="2" stroke-linejoin="round" />
+                    <path d="M1 21.0001L21.0001 0.999921" stroke="#F8FBFA" stroke-width="2" stroke-linejoin="round" />
+                </svg>
+
+                {/* <img onClick={closePoppup} className={s.closePoppup} src={close} alt="close" /> */}
             </div>
         </div >
 

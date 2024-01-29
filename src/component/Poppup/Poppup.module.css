@@ -13,16 +13,17 @@
 }
 
 .poppup {
-  position: relative;
+    position: relative;
     max-width: 1200px;
     min-width: 600px;
     margin: 0 auto;
     flex-grow: 1;
+    box-sizing: border-box;
 
 }
 
 .poppup_box {
- 
+    margin: 0 20px;
     display: flex;
     justify-content: space-between;
     padding: 40px;
@@ -35,10 +36,15 @@
     overflow: hidden
 }
 
+.info {
+    padding: 26px 47px;
+}
+
 .info_title {
     font-size: 36px;
     font-weight: 700;
     line-height: 46px;
+    margin-bottom: 16px;
 }
 
 .info_text {
@@ -50,8 +56,8 @@
 .input {
     display: flex;
     flex-direction: column;
-    max-width: 366px;
-    margin-left:auto ;
+    width: 452px;
+    margin-left: auto;
 }
 
 .input_name {
@@ -118,7 +124,7 @@
 
 .closePoppup {
     position: absolute;
-    right: 0;
+    right: 20px;
     top: -52px;
     cursor: pointer;
     opacity: 0.5;
@@ -131,8 +137,8 @@
 
 .clear_name {
     position: absolute;
-    top: 72px;
-    right: 110px;
+    top: 50px;
+    right: 74px;
     cursor: pointer;
     opacity: 0.5;
     transition: all ease 0.3s;
@@ -144,23 +150,75 @@
 
 .clear_phone {
     position: absolute;
-    top: 131px;
-    right: 110px;
+    top: 110px;
+    right: 74px;
     cursor: pointer;
     opacity: 0.5;
     transition: all ease 0.3s;
 }
-.clear_phone:hover{
+
+.clear_phone:hover {
     opacity: 1;
 }
+
 .clear_email {
     position: absolute;
-    top: 193px;
-    right: 110px;
+    top: 169px;
+    right: 74px;
     cursor: pointer;
     opacity: 0.5;
     transition: all ease 0.3s;
 }
-.clear_email:hover{
+
+.clear_email:hover {
     opacity: 1;
+}
+
+@media(max-width:690px) {
+    .info {
+        padding: 0 27px 0 0;
+    }
+
+    .info_title {
+        font-size: 26px;
+
+    }
+
+    .info_text {
+        font-size: 14px;
+    }
+}
+
+@media(max-width:572px) {
+    .poppup_box {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .input {
+        width: 320px;
+        margin: 0 auto;
+    }
+
+    .info {
+        padding: 0 0 30px 12px;
+    }
+
+    .poppup_box {
+        width: 340px;
+    }
+
+    .closePoppup {
+        position: absolute;
+        right: 113px;
+        top: -38px;
+        cursor: pointer;
+        opacity: 0.5;
+        transition: all ease 0.3s;
+        fill: #00D29F
+    }
+
+    .poppup_box {
+        margin: 0 auto;
+    }
 }
