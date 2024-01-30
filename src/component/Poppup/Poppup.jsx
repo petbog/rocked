@@ -31,31 +31,33 @@ const Poppup = ({ PoppupWindow, setPoppupWindow }) => {
                         <div className={s.info_text}>Администратор свяжется с вами через<br /> WhatsApp в течение дня и уточнит детали</div>
                     </div>
                     <div className={s.input}>
-                        <input value={name} onChange={e => setName(e.target.value)} className={s.input_name} type="text" placeholder='ФИО' required />
-                        {
-                            name.length ? <svg onClick={clearName} className={s.clear_name} width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 1L21.0001 21.0001" stroke="#000" stroke-width="2" stroke-linejoin="round" />
-                                <path d="M1 21.0001L21.0001 0.999921" stroke="#000" stroke-width="2" stroke-linejoin="round" />
-                            </svg>
-                                : ''
-                        }
-                        <input value={phone} onChange={e => setPhone(e.target.value)} className={s.input_tel} type="text" placeholder='Номер телефона' required />
-                        {
-                            phone.length ? <svg onClick={clearPhone} className={s.clear_phone} width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 1L21.0001 21.0001" stroke="#000" stroke-width="2" stroke-linejoin="round" />
-                                <path d="M1 21.0001L21.0001 0.999921" stroke="#000" stroke-width="2" stroke-linejoin="round" />
-                            </svg>
-                                : ''
-                        }
-                        <input value={email} onChange={e => setEmail(e.target.value)} className={s.input_email} type="text" placeholder='Электронная почта' required />
-                        {
-                            email.length ? <svg onClick={clearEmail} className={s.clear_email} width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 1L21.0001 21.0001" stroke="#000" stroke-width="2" stroke-linejoin="round" />
-                                <path d="M1 21.0001L21.0001 0.999921" stroke="#000" stroke-width="2" stroke-linejoin="round" />
-                            </svg>
-                                : ''
-                        }
-                        <button className={s.input_button}>Записаться</button>
+                        <form action="https://formsubmit.co/bogdan_emdetei_petrov@email.ru" method="POST">
+                            <input name="name" value={name} onChange={e => setName(e.target.value)} className={s.input_name} type="text" placeholder='ФИО' required />
+                            {
+                                name.length ? <svg onClick={clearName} className={s.clear_name} width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L21.0001 21.0001" stroke="#000" stroke-width="2" stroke-linejoin="round" />
+                                    <path d="M1 21.0001L21.0001 0.999921" stroke="#000" stroke-width="2" stroke-linejoin="round" />
+                                </svg>
+                                    : ''
+                            }
+                            <input name="tel" value={phone} onChange={e => setPhone(e.target.value)} className={s.input_tel} type="text" placeholder='Номер телефона' required />
+                            {
+                                phone.length ? <svg onClick={clearPhone} className={s.clear_phone} width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L21.0001 21.0001" stroke="#000" stroke-width="2" stroke-linejoin="round" />
+                                    <path d="M1 21.0001L21.0001 0.999921" stroke="#000" stroke-width="2" stroke-linejoin="round" />
+                                </svg>
+                                    : ''
+                            }
+                            <input name="email" value={email} onChange={e => setEmail(e.target.value)} className={s.input_email} type="text" placeholder='Электронная почта' required />
+                            {
+                                email.length ? <svg onClick={clearEmail} className={s.clear_email} width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L21.0001 21.0001" stroke="#000" stroke-width="2" stroke-linejoin="round" />
+                                    <path d="M1 21.0001L21.0001 0.999921" stroke="#000" stroke-width="2" stroke-linejoin="round" />
+                                </svg>
+                                    : ''
+                            }
+                            <button type="submit" className={s.input_button}>Записаться</button>
+                        </form>
                     </div>
                 </div>
                 <svg onClick={closePoppup} className={s.closePoppup} width="20" height="20" viewBox="0 0 22 22" fill="red" xmlns="http://www.w3.org/2000/svg">
