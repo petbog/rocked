@@ -113,6 +113,7 @@
     letter-spacing: 0.6px;
     margin-left: 30px;
     cursor: pointer;
+    margin-right: 1px;
 }
 
 .buttonInfo:hover {
@@ -129,6 +130,7 @@
     position: absolute;
     width: 174px;
     height: 100%;
+    left: -1px;
     background-color: #E2F0EF;
     clip-path: polygon(0 0, 32% 0, 100% 100%, 0% 100%);
 }

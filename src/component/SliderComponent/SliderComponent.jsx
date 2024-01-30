@@ -1,7 +1,7 @@
-import img1 from '../../img/1663647217_40-phonoteka-org-p-gachimuchi-fon-vkontakte-50.jpg'
+import img1 from '../../img/Без названия.jpg'
 import img2 from '../../img/Group43.png'
-import img3 from '../../img/Гачимучи.jpg'
-import img4 from '../../img/maxresdefault.jpg'
+import img3 from '../../img/e70091f7e500d92843f7a62fe10cf2a6.jpg'
+import img4 from '../../img/1200x630_21_22a60b6cb98c39cbbe8bcde3965f9eb7@1284x770_0xac120003_736210861637668040.jpeg'
 
 export const SliderComponent=[
     {
