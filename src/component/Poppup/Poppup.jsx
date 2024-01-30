@@ -31,7 +31,7 @@ const Poppup = ({ PoppupWindow, setPoppupWindow }) => {
                         <div className={s.info_text}>Администратор свяжется с вами через<br /> WhatsApp в течение дня и уточнит детали</div>
                     </div>
                     <div className={s.input}>
-                        <form action="https://formsubmit.co/bogdan_emdetei_petrov@email.ru" method="POST">
+                        <form action="https://formsubmit.co/bogdan_emdetei_petrov@mail.ru" method="POST">
                             <input name="name" value={name} onChange={e => setName(e.target.value)} className={s.input_name} type="text" placeholder='ФИО' required />
                             {
                                 name.length ? <svg onClick={clearName} className={s.clear_name} width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
