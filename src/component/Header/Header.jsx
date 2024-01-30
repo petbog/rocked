@@ -69,7 +69,7 @@ const Header = () => {
                 </div>
             </div>
             {
-                PoppupWindow ? <Poppup isActiv={PoppupWindow}  setPoppupWindow={setPoppupWindow}/> : ''
+                PoppupWindow ? <Poppup PoppupWindow={PoppupWindow}  setPoppupWindow={setPoppupWindow}/> : ''
             }
         </div>
     )

@@ -2,7 +2,7 @@ import s from './Poppup.module.css'
 import close from '../../img/Кнопка _Закрыть_.svg'
 import { useState } from 'react'
 
-const Poppup = ({ isActiv, setPoppupWindow }) => {
+const Poppup = ({ PoppupWindow, setPoppupWindow }) => {
 
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
@@ -18,12 +18,12 @@ const Poppup = ({ isActiv, setPoppupWindow }) => {
         setPhone('')
     }
     const closePoppup = () => {
-        setPoppupWindow(!isActiv)
+        setPoppupWindow(!PoppupWindow)
         document.body.style.overflow = 'auto'
         window.scrollTo(0, 0)
     }
     return (
-        <div div className={isActiv ? `${s.background} + ${s.scrollOff}` : s.background} >
+        <div div className={PoppupWindow ? `${s.background} + ${s.scrollOff}` : s.background} >
             <div className={s.poppup}>
                 <div className={s.poppup_box}>
                     <div className={s.info}>
@@ -58,9 +58,9 @@ const Poppup = ({ isActiv, setPoppupWindow }) => {
                         <button className={s.input_button}>Записаться</button>
                     </div>
                 </div>
-                <svg onClick={closePoppup} className={s.closePoppup} width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 1L21.0001 21.0001" stroke="#F8FBFA" stroke-width="2" stroke-linejoin="round" />
-                    <path d="M1 21.0001L21.0001 0.999921" stroke="#F8FBFA" stroke-width="2" stroke-linejoin="round" />
+                <svg onClick={closePoppup} className={s.closePoppup} width="20" height="20" viewBox="0 0 22 22" fill="red" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L21.0001 21.0001" stroke="" stroke-width="2" stroke-linejoin="round" />
+                    <path d="M1 21.0001L21.0001 0.999921" stroke="" stroke-width="2" stroke-linejoin="round" />
                 </svg>
 
                 {/* <img onClick={closePoppup} className={s.closePoppup} src={close} alt="close" /> */}

@@ -1,7 +1,6 @@
 import { useState } from "react"
 import Footer from "../../component/Footer/Footer"
 import Header from "../../component/Header/Header"
-import MainBottom from "../../component/MainBottom/MainBottom"
 import MainTop from "../../component/MainTop/MainTop"
 import Navigate from "../../component/Navigate/Navigate"
 import Slider from "../../component/Slider/Slider"
@@ -11,10 +10,16 @@ import Poppup from "../../component/Poppup/Poppup"
 
 
 
+
 const HomePage = () => {
+
+    const [PoppupWindow, setPoppupWindow] = useState(false)
 
     return (
         <div className="">
+            {
+                PoppupWindow && <Poppup PoppupWindow={PoppupWindow} setPoppupWindow= {setPoppupWindow} />
+            }
             <div className={s.container}>
                 <Header />
             </div>
@@ -23,7 +28,7 @@ const HomePage = () => {
             <MainTop />
             <WindowQuestion />
             <div className={s.container}>
-                <Slider  />
+                <Slider PoppupWindow={PoppupWindow} setPoppupWindow={setPoppupWindow} />
             </div>
             <Footer />
         </div>

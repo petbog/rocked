@@ -4,20 +4,18 @@ import Poppup from './../Poppup/Poppup';
 
 
 
-const MainBottom = ({ advantages1, advantages2, advantages3, advantages4, prevSum, nextSum, imges}) => {
+const MainBottom = ({ advantages1, advantages2, advantages3, advantages4, prevSum, nextSum, imges,PoppupWindow, setPoppupWindow}) => {
 
     const[poppup,setPoppup]=useState(false)
-    const closePoppup = () => {
+    const  openPoppup = () => {
         setPoppup(false);
-        document.body.style.overflow = 'auto';
+        setPoppupWindow(!PoppupWindow)
+        document.body.style.overflow = 'hidden';
         window.scrollTo(0, 0);
       };
    
     return (
         <div className="">
-            {
-                poppup && <Poppup />
-            }
             <div className={s.itemBox}>
                 <div className={s.MainBottom}>
                     <div className={s.box}>
@@ -37,7 +35,7 @@ const MainBottom = ({ advantages1, advantages2, advantages3, advantages4, prevSu
                                 <div className={s.preceNext}>{nextSum}₽</div>
                             </div>
                             <div className={s.button}>
-                                <button onClick={()=>setPoppup(!poppup)}  className={s.buttonDetails}>Записаться</button>
+                                <button onClick={openPoppup}  className={s.buttonDetails}>Записаться</button>
                                 <button className={s.buttonInfo}>Подробнее</button>
                             </div>
                         </div>

@@ -5,7 +5,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 import MainBottom from './../MainBottom/MainBottom';
 import { SliderComponent } from '../SliderComponent/SliderComponent'
 
-const Slider = () => {
+const Slider = ({PoppupWindow, setPoppupWindow}) => {
 
 
 
@@ -23,7 +23,7 @@ const Slider = () => {
                 {
                     SliderComponent.map((slide, i) => (
                         <SwiperSlide key={i}>
-                            <MainBottom {...slide} />
+                            <MainBottom {...slide} PoppupWindow={PoppupWindow}  setPoppupWindow={setPoppupWindow}/>
                         </SwiperSlide>
                     ))
                 }

@@ -129,6 +129,7 @@
     cursor: pointer;
     opacity: 0.5;
     transition: all ease 0.3s;
+    stroke: #F8FBFA;
 }
 
 .closePoppup:hover {
@@ -210,15 +211,30 @@
 
     .closePoppup {
         position: absolute;
-        right: 113px;
-        top: -38px;
+        right: 126px;
+        top: 17px;
         cursor: pointer;
         opacity: 0.5;
         transition: all ease 0.3s;
-        fill: #00D29F
+        stroke: #569B89
     }
 
     .poppup_box {
         margin: 0 auto;
+    }
+    .clear_name {
+        top: 233px;
+        right: 152px;
+    }
+
+    
+    .clear_phone {
+        top: 290px;
+        right: 152px;
+    }
+
+    .clear_email {
+        top: 351px;
+        right: 152px;
     }
 }
