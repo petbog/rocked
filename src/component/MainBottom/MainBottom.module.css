@@ -1,5 +1,5 @@
-.container{
-    max-width:1170px;
+.container {
+    max-width: 1170px;
     margin: 0 auto;
     padding: 0 15px;
     box-sizing: border-box;
@@ -11,9 +11,11 @@
     padding-bottom: 77px;
 
 }
-.doc{
+
+.doc {
     max-height: 439px;
 }
+
 .box {
     width: 1140px;
     height: 440px;
@@ -51,7 +53,7 @@
     font-size: 16px;
     line-height: 20px;
     color: #364844;
-    padding:  0 23px 0 0 ;
+    padding: 0 23px 0 0;
 }
 
 .priceBox {
@@ -188,31 +190,37 @@
         padding-bottom: 55px;
     }
 }
-@media(max-width:676px){
+
+@media(max-width:676px) {
     .box {
         margin-top: 326px;
     }
 }
-@media(max-width:538px){
+
+@media(max-width:538px) {
     .box {
         margin-top: 224px;
     }
 }
-@media(max-width:490px){
+
+@media(max-width:490px) {
     .box {
         margin-top: 229px;
     }
 }
-@media(max-width:410px){
+
+@media(max-width:410px) {
     .box {
         margin-top: 149px;
     }
 }
-@media(max-width:358px){
+
+@media(max-width:358px) {
     .box {
         margin-top: 108px;
     }
 }
+
 @media(max-width:710px) {
     .box {
         width: 100%;
@@ -226,45 +234,58 @@
         margin-top: 11px;
         font-size: 29px;
     }
-    .text{
+
+    .text {
         font-size: 15px;
     }
-    .advantagesList{
+
+    .advantagesList {
         font-size: 11px;
         margin-top: -8px;
         line-height: 23px;
     }
-    .pricePrev{
+
+    .pricePrev {
         font-size: 15px;
     }
-    .preceNext{
+
+    .preceNext {
         font-size: 12px;
     }
-    .buttonDetails{
+
+    .buttonDetails {
         font-size: 12px;
         width: 117px;
         height: 36px;
     }
-    .buttonInfo{
+
+    .buttonInfo {
         font-size: 12px;
         width: 117px;
         height: 36px;
     }
 }
+
 @media(max-width:378px) {
+    .buttonInfo {
+        margin-right: 50px;
+    }
+
     .doc {
         height: 223px;
     }
 
 }
-@media(max-width:366px) {
 
-    .buttonDetails{
+@media(max-width:366px) {
+  
+    .buttonDetails {
         font-size: 11px;
         width: 95px;
         height: 33px;
     }
-    .buttonInfo{
+
+    .buttonInfo {
         font-size: 11px;
         width: 95px;
         height: 33px;

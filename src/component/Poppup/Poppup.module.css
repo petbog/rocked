@@ -193,7 +193,7 @@
 @media(max-width:572px) {
     .poppup_box {
         flex-direction: column;
-        padding: 20px;
+        padding: 5px;
     }
 
     .input {
@@ -211,8 +211,8 @@
 
     .closePoppup {
         position: absolute;
-        right: 126px;
-        top: 17px;
+        right: 144px;
+        top: 19px;
         cursor: pointer;
         opacity: 0.5;
         transition: all ease 0.3s;
@@ -222,12 +222,13 @@
     .poppup_box {
         margin: 0 auto;
     }
+
     .clear_name {
         top: 233px;
         right: 152px;
     }
 
-    
+
     .clear_phone {
         top: 290px;
         right: 152px;
@@ -236,5 +237,10 @@
     .clear_email {
         top: 351px;
         right: 152px;
+    }
+
+    .input_button {
+        display: flow-root;
+        margin: 16px auto 11px auto;
     }
 }
