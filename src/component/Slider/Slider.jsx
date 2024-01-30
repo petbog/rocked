@@ -12,10 +12,10 @@ const Slider = ({ PoppupWindow, setPoppupWindow }) => {
     return (
         <div className='slider'>
             <Swiper
-                //  autoplay={{
-                //     delay: 2500,
-                //     disableOnInteraction: false,
-                // }}
+                 autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                }}
                 pagination={{
                     type: 'fraction',
                 }}

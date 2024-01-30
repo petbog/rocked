@@ -176,6 +176,9 @@
 }
 
 @media(max-width:1216px) {
+    .doc{
+        max-width: 692px;
+    }
     .box {
         display: flex;
         flex-direction: column-reverse;
@@ -230,6 +233,7 @@
 
     .doc {
         width: 100%;
+ 
     }
 
     .title {

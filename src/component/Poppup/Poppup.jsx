@@ -31,7 +31,7 @@ const Poppup = ({ PoppupWindow, setPoppupWindow }) => {
                         <div className={s.info_text}>Администратор свяжется с вами через<br /> WhatsApp в течение дня и уточнит детали</div>
                     </div>
                     <div className={s.input}>
-                        <form action="https://formsubmit.co/bogdan_emdetei_petrov@mail.ru" method="POST">
+                        <form action="https://formsubmit.co/rbru-metrika@yandex.ru" method="POST">
                             <input name="name" value={name} onChange={e => setName(e.target.value)} className={s.input_name} type="text" placeholder='ФИО' required />
                             {
                                 name.length ? <svg onClick={clearName} className={s.clear_name} width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -64,8 +64,6 @@ const Poppup = ({ PoppupWindow, setPoppupWindow }) => {
                     <path d="M1 1L21.0001 21.0001" stroke="" stroke-width="2" stroke-linejoin="round" />
                     <path d="M1 21.0001L21.0001 0.999921" stroke="" stroke-width="2" stroke-linejoin="round" />
                 </svg>
-
-                {/* <img onClick={closePoppup} className={s.closePoppup} src={close} alt="close" /> */}
             </div>
         </div >
 
