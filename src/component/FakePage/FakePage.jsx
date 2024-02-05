@@ -10,14 +10,15 @@ const FakePage = () => {
     useEffect(() => {
         try {
             const fun = async (params) => {
-                const { data } = await axios.post(`https://back-rocked.vercel.app/send-email`, { params })
+                const { name, email, message } = params;
+                const { data } = await axios.post(`https://back-rocked.vercel.app/send-email`, { name, email, message })
                 setInfo(data)
                 console.log('create')
             }
             fun({
-                "name": "bogdan",
-                "email": "sdnfsdionsdnosdifnsoi@mail.ru",
-                "message": "test"
+                name: "bogdan",
+                email: "sdnfsdionsdnosdifnsoi@mail.ru",
+                message: "test"
             })
         } catch (error) {
             console.warn(error)
