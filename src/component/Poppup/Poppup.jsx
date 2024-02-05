@@ -1,12 +1,14 @@
+import { useDispatch } from 'react-redux';
 import s from './Poppup.module.css'
-import close from '../../img/Кнопка _Закрыть_.svg'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { fetchPoppupData } from '../../Redux/Slice/SliceFaq';
 
 const Poppup = ({ PoppupWindow, setPoppupWindow }) => {
 
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
     const [email, setEmail] = useState('');
+    const dispatch = useDispatch()
 
     const clearName = () => {
         setName('')
@@ -22,6 +24,13 @@ const Poppup = ({ PoppupWindow, setPoppupWindow }) => {
         document.body.style.overflow = 'auto'
         window.scrollTo(0, 0)
     }
+
+    const handleEmail=()=>{
+              if (name.length && phone.length && email.length) {
+            dispatch(fetchPoppupData({ name, phone, email }))
+        }
+    }
+
     return (
         <div div className={PoppupWindow ? `${s.background} + ${s.scrollOff}` : s.background} >
             <div className={s.poppup}>
@@ -31,7 +40,7 @@ const Poppup = ({ PoppupWindow, setPoppupWindow }) => {
                         <div className={s.info_text}>Администратор свяжется с вами через<br /> WhatsApp в течение дня и уточнит детали</div>
                     </div>
                     <div className={s.input}>
-                        <form action="https://formsubmit.co/rbru-metrika@yandex.ru" method="POST">
+                        <form >
                             <input name="name" value={name} onChange={e => setName(e.target.value)} className={s.input_name} type="text" placeholder='ФИО' required />
                             {
                                 name.length ? <svg onClick={clearName} className={s.clear_name} width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -56,7 +65,7 @@ const Poppup = ({ PoppupWindow, setPoppupWindow }) => {
                                 </svg>
                                     : ''
                             }
-                            <button type="submit" className={s.input_button}>Записаться</button>
+                            <button onClick={handleEmail} type="submit" className={s.input_button}>Записаться</button>
                         </form>
                     </div>
                 </div>

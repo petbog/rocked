@@ -10,7 +10,7 @@
 .swiper-button-prev {
   background-repeat: no-repeat;
   padding: 5px;
-  background-position-y: 9px;
+  /* background-position-y: 9px; */
   left: 42% !important;
   top: 95% !important;
 }
@@ -28,6 +28,11 @@
 
 .swiper-button-prev::after{
   content: url("../../img//Vector\ \(1\).svg" )!important;
+}
+.swiper-button-prev::after:hover{
+  width: 30px;
+  height: 20px;
+  content: url("../../img/green\ vector.png" )!important;
 }
 .swiper-button-next::after{
   content: url("../../img/Vector\ \(2\).svg") !important;

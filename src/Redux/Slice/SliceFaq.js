@@ -11,14 +11,29 @@ export const fetchFaq = createAsyncThunk('faq/fetchFaq', async () => {
     }
 })
 
-const initialState={
-    data:[]
+export const fetchPoppupData = createAsyncThunk('poppup/fetchPoppupData', async (params) => {
+    try {
+        const { name, email, message } = params;
+        console.log(params)
+        const { data } = await axios.post(`https://back-rocked.vercel.app/send-email`, { name, email, message })
+        return data
+    } catch (error) {
+        console.warn(error)
+    }
+})
+
+
+
+
+
+const initialState = {
+    data: []
 }
 
 const FaqSlice = createSlice({
     name: 'Faq',
     initialState,
-    status:'',
+    status: '',
     extraReducers: (builder) => {
         builder.addCase(fetchFaq.pending, (state, action) => {
             state.data = [];
