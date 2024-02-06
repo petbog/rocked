@@ -13,9 +13,9 @@ export const fetchFaq = createAsyncThunk('faq/fetchFaq', async () => {
 
 export const fetchPoppupData = createAsyncThunk('poppup/fetchPoppupData', async (params) => {
     try {
-        const { name, email, message } = params;
+        const { name, email, phone } = params;
         console.log(params)
-        const { data } = await axios.post(`https://back-rocked.vercel.app/send-email`, { name, email, message })
+        const { data } = await axios.post(`https://back-rocked.vercel.app/send-email`, { name, email, phone })
         return data
     } catch (error) {
         console.warn(error)
