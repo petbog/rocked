@@ -1,117 +1,157 @@
+
+.custom-next-arrow {
+  position: absolute;
+  top: 86.5%;
+  right: 42%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 30px;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-image:url("../../img/Vector\ \(2\).svg") !important;
+  background-repeat: no-repeat;
+  z-index: 20;
+  cursor: pointer;
+}
+.custom-next-arrow:hover{
+  background-image:url("../../img/green\ vector.png") !important;
+  background-repeat: no-repeat;
+}
+
+.custom-prev-arrow {
+  position: absolute;
+  top: 86.5%;
+  left: 43%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 30px;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-image: url("../../img//Vector\ \(1\).svg" ) !important;
+  background-repeat: no-repeat;
+  z-index: 20;
+  cursor: pointer;
+}
+.custom-prev-arrow:hover{
+  background-image: url("../../img/VectorGreen.svg" ) !important;
+  background-repeat: no-repeat;
+}
 .slider {
   height: 702px;
   position: relative;
 }
 
-.swiper-wrapper {
-  position: relative;
-}
-
-.swiper-button-prev {
-  background-repeat: no-repeat;
-  padding: 5px;
-  /* background-position-y: 9px; */
-  left: 42% !important;
-  top: 95% !important;
-}
-
-.swiper-button-next {
-  background-repeat: no-repeat;
-  padding: 5px;
-  left: 54% !important;
-  top: 95% !important;
-}
-.swiper-button-next::after,.swiper-button-prev::after {
-  content: "";
-}
-.swiper-button-next:hover {
-  background-repeat: no-repeat;
-}
-
-.swiper-button-prev::after{
-  content: url("../../img//Vector\ \(1\).svg" )!important;
-}
-.swiper-button-prev::after:hover{
-  width: 30px;
-  height: 20px;
-  content: url("../../img/green\ vector.png" )!important;
-}
-.swiper-button-next::after{
-  content: url("../../img/Vector\ \(2\).svg") !important;
-}
 
 
 @media(max-width:1217px) {
-  .swiper-button-prev {
-    top: 97% !important;
+  .custom-prev-arrow {
+    top: 135% !important;
   }
-  .swiper-button-next {
-    top: 97% !important;
+  .custom-next-arrow {
+    top: 135% !important;
   }
 }
 
 @media(max-width:923px) {
-  .swiper-button-prev {
-    top: 97% !important;
+  .custom-prev-arrow {
+    top: 135% !important;
     left: 41% !important;
   }
 
-  .swiper-button-next {
-    left: 56% !important;
-    top: 97% !important;
+  .custom-next-arrow {
+    left: 55% !important;
+    top: 135% !important;
   }
 }
 
 @media(max-width:711px) {
-  .swiper-button-prev {
-    left: 34% !important;
-    top: 96.5% !important;
+  .custom-prev-arrow {
+    left: 37% !important;
+    top: 135% !important;
   }
 
-  .swiper-button-next {
+  .custom-next-arrow {
     left: 57% !important;
-    top: 96.5% !important;
+    top: 135% !important;
   }
 
 }
-
-@media(max-width:547px) {
-  .swiper-button-prev {
-    left: 32% !important;
-    top: 96.5% !important;
+@media(max-width:676px){
+  .custom-prev-arrow {
+    left: 37% !important;
+    top: 119% !important;
   }
 
-  .swiper-button-next {
+  .custom-next-arrow {
+    left: 57% !important;
+    top: 119% !important;
+  }
+
+}
+@media(max-width:547px) {
+  .custom-prev-arrow {
+    left: 32% !important;
+    top: 119% !important;
+  }
+
+  .custom-next-arrow {
     left: 60% !important;
   }
 }
-
-@media(max-width:452px) {
-  .swiper-button-prev {
-    left: 29% !important;
-    top: 96% !important;
+@media(max-width:538px) {
+  .custom-prev-arrow {
+    left: 32% !important;
+    top: 104% !important;
   }
 
-  .swiper-button-next {
+  .custom-next-arrow {
+    left: 60% !important;
+    top: 104% !important;
+  }
+}
+@media(max-width:452px) {
+  .custom-prev-arrow {
+    left: 29% !important;
+    top: 104.5% !important;
+  }
+
+  .custom-next-arrow {
     left: 62% !important;
-    top: 96% !important;
+    top: 104.5% !important
+  }
+}
+@media(max-width:439px) {
+  .custom-prev-arrow {
+    left: 29% !important;
+    top: 105% !important;
+  }
+
+  .custom-next-arrow {
+    left: 62% !important;
+    top: 105% !important;
   }
 }
 @media(max-width:408px) {
-  .swiper-button-prev {
-    top: 95.5% !important;
+  .custom-prev-arrow {
+    top: 93.5% !important;
   }
 
-  .swiper-button-next {
-    top: 95.5% !important;
+  .custom-next-arrow {
+    top: 93.5% !important;
   }
 }
 @media(max-width:350px) {
-  .swiper-button-prev {
+  .custom-prev-arrow {
     left: 25% !important;
+    top: 87.5% !important;
   }
 
-  .swiper-button-next {
+  .custom-next-arrow {
     left: 64% !important;
+    top: 87.5% !important;
   }
 }
