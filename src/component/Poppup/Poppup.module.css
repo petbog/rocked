@@ -58,6 +58,7 @@
     flex-direction: column;
     width: 452px;
     margin-left: auto;
+    position: relative;
 }
 
 .input_name {
@@ -69,7 +70,7 @@
     letter-spacing: 1px;
     border: 1px solid #E1E1E1;
     border-radius: 5px;
-    margin: 0 0 17px 0;
+    margin: 0 0 30px 0;
     outline: none;
     position: relative;
 }
@@ -84,7 +85,7 @@
     letter-spacing: 1px;
     border: 1px solid #E1E1E1;
     border-radius: 5px;
-    margin: 0 0 17px 0;
+    margin: 0 0 30px 0;
     outline: none
 }
 
@@ -138,8 +139,8 @@
 
 .clear_name {
     position: absolute;
-    top: 50px;
-    right: 74px;
+    top: 12px;
+    right: 29px;
     cursor: pointer;
     opacity: 0.5;
     transition: all ease 0.3s;
@@ -151,8 +152,8 @@
 
 .clear_phone {
     position: absolute;
-    top: 110px;
-    right: 74px;
+    top: 84px;
+    right: 29px;
     cursor: pointer;
     opacity: 0.5;
     transition: all ease 0.3s;
@@ -164,8 +165,8 @@
 
 .clear_email {
     position: absolute;
-    top: 169px;
-    right: 74px;
+    top: 154px;
+    right: 29px;
     cursor: pointer;
     opacity: 0.5;
     transition: all ease 0.3s;
@@ -175,6 +176,39 @@
     opacity: 1;
 }
 
+.errorValidTel{
+    color: red;
+    font-size: 16px;
+    position: absolute;
+    top: 47px;
+    left: 5px;
+}
+.errorValidName{
+    color: red;
+    font-size: 16px;
+    position: absolute;
+    top: -24px;
+    left: 5px;
+}
+.errorValidEmail{
+    color: red;
+    font-size: 16px;
+    position: absolute;
+    top: 119px;
+    left: 5px;
+}
+.bittonDIsabled{
+    background-color: rgb(3 70 41);
+}
+.loader{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: black;
+    font-size: 50px;
+    z-index: 20;
+}
 @media(max-width:690px) {
     .info {
         padding: 0 27px 0 0;
@@ -224,19 +258,19 @@
     }
 
     .clear_name {
-        top: 233px;
-        right: 152px;
+        top: 12px;
+        right: 30px;
     }
 
 
     .clear_phone {
-        top: 290px;
-        right: 152px;
+        top: 83px;
+        right: 30px;
     }
 
     .clear_email {
-        top: 351px;
-        right: 152px;
+        top: 155px;
+        right: 30px;
     }
 
     .input_button {

@@ -27,14 +27,17 @@ export const fetchPoppupData = createAsyncThunk('poppup/fetchPoppupData', async 
 
 
 const initialState = {
-    data: []
+    data: [],
+
 }
 
 const FaqSlice = createSlice({
     name: 'Faq',
     initialState,
     status: '',
+    statusEmail:'loading',
     extraReducers: (builder) => {
+        //данные для аккордиона
         builder.addCase(fetchFaq.pending, (state, action) => {
             state.data = [];
             state.status = 'loading';
@@ -47,7 +50,16 @@ const FaqSlice = createSlice({
             state.data = [];
             state.status = 'error'
         });
-
+        //данные для аккордиона
+        builder.addCase(fetchPoppupData.pending, (state, action) => {
+            state.statusEmail = 'loading';
+        });
+        builder.addCase(fetchPoppupData.fulfilled, (state, action) => {
+            state.statusEmail = 'success';
+        });
+        builder.addCase(fetchPoppupData.rejected, (state, action) => {
+            state.statusEmail = 'error'
+        });
     }
 })
 

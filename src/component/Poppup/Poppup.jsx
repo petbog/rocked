@@ -1,11 +1,14 @@
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import s from './Poppup.module.css'
 import { useEffect, useState } from 'react'
 import { fetchPoppupData } from '../../Redux/Slice/SliceFaq';
+import loader from '../../img/1476.gif'
 
 const Poppup = ({ PoppupWindow, setPoppupWindow }) => {
 
     const dispatch = useDispatch()
+    const {statusEmail}=useSelector(state => state.faq)
+    
 
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
@@ -16,7 +19,16 @@ const Poppup = ({ PoppupWindow, setPoppupWindow }) => {
     const [nameError, setNameError] = useState('Заполните свои данные');
     const [phoneError, setPhoneError] = useState('Укажите телефон');
     const [emailError, setEmailError] = useState('Укажите почту');
+    const [formValid, setFornValid] = useState(false)
 
+
+    useEffect(() => {
+        if (nameError || phoneError || emailError) {
+            setFornValid(false)
+        } else {
+            setFornValid(true)
+        }
+    }, [nameError, phoneError, emailError])
 
     const clearName = () => {
         setName('')
@@ -52,12 +64,19 @@ const Poppup = ({ PoppupWindow, setPoppupWindow }) => {
 
     const phoneHandler = (e) => {
         setPhone(e.target.value)
-        const re =/^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/
+        const re = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/
         if (!re.test(String(e.target.value).toLowerCase())) {
             setPhoneError('Некорректный номер')
         } else {
             setPhoneError('')
         }
+    }
+    const nameHandler = (e) => {
+        setName(e.target.value)
+        if (e.target.value < 3) {
+            setNameError('Укажите свои данные')
+        }
+        setNameError('')
     }
     const blurHandle = (e) => {
         switch (e.target.name) {
@@ -77,6 +96,9 @@ const Poppup = ({ PoppupWindow, setPoppupWindow }) => {
 
     return (
         <div div className={PoppupWindow ? `${s.background} + ${s.scrollOff}` : s.background} >
+            {
+              statusEmail === 'loading' ?  <img className={s.loader} src={loader} alt="loader" />: '' 
+            }
             <div className={s.poppup}>
                 <div className={s.poppup_box}>
                     <div className={s.info}>
@@ -85,9 +107,9 @@ const Poppup = ({ PoppupWindow, setPoppupWindow }) => {
                     </div>
                     <div className={s.input}>
                         {
-                            (nameDirty && nameError) && <div style={{ color: "red" }}>{nameError}</div>
+                            (nameDirty && nameError) && <div className={s.errorValidName} >{nameError}</div>
                         }
-                        <input onBlur={e => blurHandle(e)} name="name" value={name} onChange={e => setName(e.target.value)} className={s.input_name} type="text" placeholder='ФИО' required />
+                        <input onBlur={e => blurHandle(e)} name="name" value={name} onChange={e => nameHandler(e)} className={s.input_name} type="text" placeholder='ФИО' required />
                         {
                             name.length ? <svg onClick={clearName} className={s.clear_name} width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1 1L21.0001 21.0001" stroke="#000" stroke-width="2" stroke-linejoin="round" />
@@ -96,7 +118,7 @@ const Poppup = ({ PoppupWindow, setPoppupWindow }) => {
                                 : ''
                         }
                         {
-                            (phoneDirty && phoneError) && <div style={{ color: "red" }}>{phoneError}</div>
+                            (phoneDirty && phoneError) && <div className={s.errorValidTel} >{phoneError}</div>
                         }
                         <input onBlur={e => blurHandle(e)} name="phone" value={phone} onChange={e => phoneHandler(e)} className={s.input_tel} type="text" placeholder='Номер телефона' required />
                         {
@@ -107,7 +129,7 @@ const Poppup = ({ PoppupWindow, setPoppupWindow }) => {
                                 : ''
                         }
                         {
-                            (emailDirty && emailError) && <div style={{ color: "red" }}>{emailError}</div>
+                            (emailDirty && emailError) && <div className={s.errorValidEmail}>{emailError}</div>
                         }
                         <input onBlur={e => blurHandle(e)} name="email" value={email} onChange={e => emailHandler(e)} className={s.input_email} type="text" placeholder='Электронная почта' required />
                         {
@@ -117,7 +139,8 @@ const Poppup = ({ PoppupWindow, setPoppupWindow }) => {
                             </svg>
                                 : ''
                         }
-                        <button onClick={handleEmail} className={s.input_button}>Записаться</button>
+                        <button disabled={!formValid} onClick={handleEmail}
+                            className={!formValid ? `${s.input_button} ${s.bittonDIsabled}` : s.input_button}>Записаться</button>
                     </div>
                 </div>
                 <svg onClick={closePoppup} className={s.closePoppup} width="20" height="20" viewBox="0 0 22 22" fill="red" xmlns="http://www.w3.org/2000/svg">

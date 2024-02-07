@@ -21,7 +21,9 @@
   left: 54% !important;
   top: 95% !important;
 }
-
+.swiper-button-next::after,.swiper-button-prev::after {
+  content: "";
+}
 .swiper-button-next:hover {
   background-repeat: no-repeat;
 }
